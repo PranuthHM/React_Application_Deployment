@@ -136,7 +136,7 @@ artifacts:
 
 
 4.  **`appspec.yml`**:
-version: 0.0
+ ```version: 0.0
 # This is for a CodeDeploy deployment type 'ECS', but we're leveraging its hooks for EKS
 # Resource property values are placeholders as CodeDeploy doesn't directly manage EKS resources
 # Instead, we use a script in the hooks to run kubectl commands.
@@ -153,7 +153,7 @@ Hooks:
     - location: scripts/deploy_to_eks.sh
       timeout: 300
       runas: root
-
+```
 **Commit these files to the root of your GitHub repository.**
 
 ### Step 2: Set up AWS CodePipeline
