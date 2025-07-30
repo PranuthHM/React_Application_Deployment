@@ -84,11 +84,11 @@ spec:
         - containerPort: 80
       imagePullSecrets:
       - name: ecr-secret
-    ```
+ ```
 
 3.  **`service.yaml`**: Kubernetes manifest to expose your application via an AWS LoadBalancer.
 
-    ```yaml
+   ```yaml
     apiVersion: v1
 kind: Service
 metadata:
@@ -103,11 +103,11 @@ spec:
   - protocol: TCP
     port: 80 # Service port
     targetPort: 80 # Container port
-    ```
+   ```
 
 4.  **`buildspec.yml`**: Instructions for AWS CodeBuild to build, containerize, and prepare deployment artifacts.
 
-    ```yaml
+   ```yaml
     version: 0.2
 
 phases:
@@ -132,7 +132,7 @@ artifacts:
     - deployment.yaml
     - service.yaml
     - imagedefinitions.json
-    ```
+   ```
 
 
 4.  **`appspec.yml`**:
