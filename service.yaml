@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: brain-tasks-service
+  labels:
+    app: brain-tasks-app # Ensure this matches your deployment's app label
+spec:
+  type: LoadBalancer
+  selector:
+    app: brain-tasks-app # Selects pods with this label
+  ports:
+  - protocol: TCP
+    port: 80 # Service port
+    targetPort: 80 # Container port
