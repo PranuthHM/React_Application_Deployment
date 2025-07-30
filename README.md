@@ -136,7 +136,8 @@ artifacts:
 
 
 4.  **`appspec.yml`**:
- ```version: 0.0
+ ```yaml
+version: 0.0
 # This is for a CodeDeploy deployment type 'ECS', but we're leveraging its hooks for EKS
 # Resource property values are placeholders as CodeDeploy doesn't directly manage EKS resources
 # Instead, we use a script in the hooks to run kubectl commands.
